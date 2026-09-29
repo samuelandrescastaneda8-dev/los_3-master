@@ -1,0 +1,164 @@
+/* Estilos Globales y Fondo General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: url('../img/fondo-uam.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #f4f4f4; /* Color de respaldo si no carga la imagen */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor Principal para Login y Registro */
+.contenedor-principal {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Tarjeta de Acceso */
+.tarjeta-acceso {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+/* Logotipo y Título */
+.logo-contenedor {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.logo-contenedor h2 {
+    font-size: 20px;
+    color: #292929;
+}
+
+/* Campos de Formulario */
+.campo {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 14px;
+    color: #444;
+}
+
+.campo input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+}
+
+.campo input:focus {
+    border-color: #8b5570;
+    box-shadow: 0 0 0 2px rgba(139, 85, 112, 0.15);
+}
+
+/* Mensajes de Error en Validación */
+.error {
+    font-size: 12px;
+    color: #b34848;
+    margin-top: 2px;
+}
+
+/* Botones */
+.boton {
+    width: 100%;
+    padding: 11px;
+    background: #8b5570;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.boton:hover {
+    background: #70445a;
+}
+
+.boton-registro {
+    background: #575757;
+}
+
+.boton-registro:hover {
+    background: #3f3f3f;
+}
+
+/* Mensajes Generales de Feedback */
+.mensaje {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Enlaces de Cambio (Login <-> Registro) */
+.enlace-cambio {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.enlace-cambio a {
+    color: #8b5570;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enlace-cambio a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos compartidos para títulos de sección */
+.titulo-seccion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.titulo-seccion h2, .titulo-seccion h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #292929;
+    white-space: nowrap;
+}
+
+.linea {
+    flex: 1;
+    height: 1px;
+    background: #d0d0d0;
+}

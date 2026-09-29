@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditoría y Bitácora - Admin UAM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estudiante.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/auditoria.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo-header">
+            <h2>Bitácora de Auditoría - UAM</h2>
+        </div>
+        <div class="usuario-info">
+            <span id="nombreAdmin">Administrador</span>
+            <a href="admin.html" class="boton-volver">Volver al Panel Admin</a>
+        </div>
+    </header>
+
+    <main class="contenedor-admin">
+        <section class="bloque-informacion">
+            <div class="titulo-seccion">
+                <span class="linea"></span>
+                <h3>Registro de Actividad del Sistema</h3>
+                <span class="linea"></span>
+            </div>
+            
+            <div class="acciones-auditoria" style="margin-bottom: 15px; display: flex; justify-content: flex-end;">
+                <button id="btnLimpiarAuditoria" class="boton-salir" style="padding: 6px 12px; font-size: 13px;">Limpiar Bitácora</button>
+            </div>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha y Hora</th>
+                            <th>Acción / Evento</th>
+                            <th>Usuario / Responsable</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaAuditoria">
+                        <!-- Carga dinámica -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/auditoria.js"></script>
+</body>
+</html>

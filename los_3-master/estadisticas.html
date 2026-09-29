@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas y Reportes - Comunidad UAM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estudiante.css">
+    <link rel="stylesheet" href="css/estadisticas.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo-header">
+            <h2>Comunidad UAM Activa</h2>
+        </div>
+        <div class="usuario-info">
+            <span id="nombreUsuario">Cargando usuario...</span>
+            <a href="estudiante.html" class="boton-volver">Volver al inicio</a>
+        </div>
+    </header>
+
+    <main class="contenedor-estadisticas">
+        <div class="titulo-seccion">
+            <span class="linea"></span>
+            <h2>Estadísticas Generales de Mantenimiento</h2>
+            <span class="linea"></span>
+        </div>
+
+        <!-- Tarjetas de Métricas Globales -->
+        <section class="tarjetas-metricas">
+            <div class="tarjeta-metrica">
+                <h3>Total Reportes</h3>
+                <p id="statTotal">0</p>
+            </div>
+            <div class="tarjeta-metrica">
+                <h3>Pendientes</h3>
+                <p id="statPendientes" class="texto-pendiente">0</p>
+            </div>
+            <div class="tarjeta-metrica">
+                <h3>En Proceso</h3>
+                <p id="statProceso" class="texto-proceso">0</p>
+            </div>
+            <div class="tarjeta-metrica">
+                <h3>Resueltos</h3>
+                <p id="statResueltos" class="texto-resuelto">0</p>
+            </div>
+        </section>
+
+        <!-- Desglose Por Categorías -->
+        <section class="panel-analisis">
+            <div class="bloque-informacion">
+                <div class="titulo-seccion">
+                    <span class="linea"></span>
+                    <h3>Reportes por Categoría</h3>
+                    <span class="linea"></span>
+                </div>
+                <div id="listaCategorias" class="contenedor-barras">
+                    <!-- Se genera dinámicamente -->
+                </div>
+            </div>
+
+            <div class="bloque-informacion">
+                <div class="titulo-seccion">
+                    <span class="linea"></span>
+                    <h3>Efectividad de Atención</h3>
+                    <span class="linea"></span>
+                </div>
+                <div class="resumen-efectividad">
+                    <div class="circulo-porcentaje">
+                        <span id="porcentajeEfectividad">0%</span>
+                        <small>Resueltos</small>
+                    </div>
+                    <p class="descripcion-efectividad">
+                        Porcentaje de casos solucionados respecto al total de solicitudes ingresadas en el sistema.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/estadisticas.js"></script>
+</body>
+</html>

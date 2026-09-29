@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Personal - Admin UAM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estudiante.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/personal.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo-header">
+            <img src="img/logo.png" alt="Logo UAM" class="logo-mini">
+            <h2>Gestión de Cuadrillas - UAM</h2>
+        </div>
+        <div class="usuario-info">
+            <span id="nombreAdmin">Administrador</span>
+            <a href="admin.html" class="boton-volver">Volver al Panel Admin</a>
+        </div>
+    </header>
+
+    <main class="contenedor-admin">
+        <!-- Registro de Nuevo Técnico / Personal -->
+        <section class="bloque-informacion">
+            <div class="titulo-seccion">
+                <span class="linea"></span>
+                <h3>Registrar Personal de Mantenimiento</h3>
+                <span class="linea"></span>
+            </div>
+            <form id="formTecnico" class="form-mantenimiento">
+                <div class="campo-inline">
+                    <input type="text" id="nombreTecnico" placeholder="Nombre completo del técnico" required>
+                    <select id="especialidadTecnico" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; background: white;">
+                        <option value="">Seleccione especialidad</option>
+                        <option value="Electricidad">Electricidad</option>
+                        <option value="Plomería">Plomería</option>
+                        <option value="Infraestructura / Albañilería">Infraestructura / Albañilería</option>
+                        <option value="Tecnología / Redes">Tecnología / Redes</option>
+                        <option value="Mobiliario General">Mobiliario General</option>
+                    </select>
+                    <button type="submit" class="boton boton-registro">Registrar Técnico</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Listado del Personal Registrado -->
+        <section class="bloque-informacion">
+            <div class="titulo-seccion">
+                <span class="linea"></span>
+                <h3>Equipo Técnico Activo</h3>
+                <span class="linea"></span>
+            </div>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Especialidad</th>
+                            <th>Estado Actual</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaTecnicos">
+                        <!-- Carga dinámica -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/personal.js"></script>
+</body>
+</html>

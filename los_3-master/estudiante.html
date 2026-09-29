@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Estudiante - Comunidad UAM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estudiante.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo-header">
+            <h2>Comunidad UAM Activa</h2>
+        </div>
+       <div class="usuario-info">
+            <span id="nombreEstudiante">Cargando usuario...</span>
+            <a href="perfil.html" class="boton-accion-outline" style="padding: 6px 12px; font-size: 13px;">Mi Perfil</a>
+            <button id="btnCerrarSesion" class="boton-salir">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <main class="contenedor-estudiante">
+        <!-- Tarjeta Principal del Edificio -->
+        <section class="tarjeta-edificio">
+            <div class="imagen-edificio-contenedor">
+                <img src="https://www.autonoma.edu.co/sites/default/files/styles/webp/public/2026-08/banner-donacion-grande_1.webp?itok=pSMoxTUo" alt="Edificio UAM" class="imagen-edificio">
+            </div>
+            <div class="detalles-edificio">
+                <h3>Edificio Central - Campus UAM</h3>
+                <p class="ubicacion"><strong>Ubicación:</strong> Manizales, Caldas - Campus Principal</p>
+                <p class="descripcion-edificio">
+                    Sede principal de actividades académicas y administrativas. Mantener nuestras instalaciones en buen estado es compromiso de todos.
+                </p>
+                <div class="acciones-rapidas">
+                    <a href="reportar.html" class="boton boton-accion">Reportar Daños</a>
+                    <a href="reportar.html#pqrs" class="boton boton-accion-secundario">Reporte PQRS</a>
+                    <a href="estadisticas.html" class="boton boton-accion-outline">Estadísticas</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secciones de Información / Historial -->
+        <section class="panel-tablas">
+            <div class="bloque-informacion">
+                <div class="titulo-seccion">
+                    <span class="linea"></span>
+                    <h3>Mis Daños Reportados</h3>
+                    <span class="linea"></span>
+                </div>
+                <div class="tabla-contenedor">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Tipo</th>
+                                <th>Ubicación</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaReportes">
+                            <!-- Se llena dinámicamente con JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bloque-informacion">
+                <div class="titulo-seccion">
+                    <span class="linea"></span>
+                    <h3>Historial de Mantenimiento</h3>
+                    <span class="linea"></span>
+                </div>
+                <div class="tabla-contenedor">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Edificio / Área</th>
+                                <th>Detalle</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaMantenimiento">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/estudiante.js"></script>
+</body>
+</html>

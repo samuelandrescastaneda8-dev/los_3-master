@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Comunidad UAM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estudiante.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo-header">
+            <h2>Panel de Administración - UAM</h2>
+        </div>
+        <div class="usuario-info">
+            <span id="nombreAdmin">Administrador</span>
+            <a href="auditoria.html" class="boton-accion-outline" style="padding: 6px 12px; font-size: 13px; text-decoration: none;">Ver Auditoría</a>
+            <a href="personal.html" class="boton-accion-outline" style="padding: 6px 12px; font-size: 13px; text-decoration: none;">Gestionar Personal</a>
+            <button id="btnCerrarSesionAdmin" class="boton-salir">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <main class="contenedor-admin">
+        <!-- Tarjetas de Resumen KPI -->
+        <section class="tarjetas-resumen">
+            <div class="tarjeta-kpi">
+                <h4>Total Reportes</h4>
+                <p id="totalReportes">0</p>
+            </div>
+            <div class="tarjeta-kpi pendiente">
+                <h4>Pendientes</h4>
+                <p id="totalPendientes">0</p>
+            </div>
+            <div class="tarjeta-kpi proceso">
+                <h4>En Proceso</h4>
+                <p id="totalProceso">0</p>
+            </div>
+            <div class="tarjeta-kpi resuelto">
+                <h4>Resueltos</h4>
+                <p id="totalResueltos">0</p>
+            </div>
+        </section>
+
+        <!-- Gestión de Reportes de Estudiantes -->
+        <section class="bloque-informacion">
+            <div class="titulo-seccion">
+                <span class="linea"></span>
+                <h3>Gestión de Solicitudes y Reportes</h3>
+                <span class="linea"></span>
+            </div>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Estudiante</th>
+                            <th>Tipo</th>
+                            <th>Ubicación</th>
+                            <th>Descripción</th>
+                            <th>Fecha</th>
+                            <th>Estado</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaAdminReportes">
+                        <!-- Carga dinámica -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Formulario para Registrar Mantenimiento -->
+        <section class="bloque-informacion">
+            <div class="titulo-seccion">
+                <span class="linea"></span>
+                <h3>Registrar Trabajo de Mantenimiento</h3>
+                <span class="linea"></span>
+            </div>
+            <form id="formMantenimiento" class="form-mantenimiento">
+                <div class="campo-inline">
+                    <input type="text" id="mantoEdificio" placeholder="Edificio / Área (Ej: Edificio Central)" required>
+                    <input type="text" id="mantoDetalle" placeholder="Detalle del mantenimiento realizado" required>
+                    <button type="submit" class="boton boton-registro">Agregar al Historial</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/* Estilos específicos para la bitácora de auditoría */
+.etiqueta-accion {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.accion-registro { background: #e2e8f0; color: #334155; }
+.accion-reporte { background: #fef3c7; color: #92400e; }
+.accion-admin { background: #dbeafe; color: #1e40af; }
+.accion-mantenimiento { background: #dcfce7; color: #166534; }

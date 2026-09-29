@@ -1,0 +1,80 @@
+.contenedor-admin {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.tarjetas-resumen {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-kpi {
+    background: rgba(255, 255, 255, 0.88);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(5px);
+}
+
+.tarjeta-kpi h4 {
+    font-family: Georgia, serif;
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.tarjeta-kpi p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #292929;
+}
+
+.tarjeta-kpi.pendiente p { color: #c4b23e; }
+.tarjeta-kpi.proceso p { color: #3b82f6; }
+.tarjeta-kpi.resuelto p { color: #4d7c55; }
+
+.select-estado {
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    background: white;
+}
+
+.form-mantenimiento {
+    margin-top: 15px;
+}
+
+.campo-inline {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.campo-inline input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.campo-inline button {
+    width: auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .campo-inline {
+        flex-direction: column;
+    }
+    .campo-inline button {
+        width: 100%;
+    }
+}

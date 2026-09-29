@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Comunidad UAM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <main class="contenedor-principal">
+        <div class="tarjeta-acceso">
+            <div class="logo-contenedor">
+                <img src="img/logo.png" alt="Logo UAM" class="logo">
+                <h2>Registro de Estudiante UAM</h2>
+            </div>
+
+            <!-- Formulario de Registro -->
+            <form id="formRegistro">
+                <div class="campo">
+                    <label for="nombreRegistro">Nombre completo</label>
+                    <input type="text" id="nombreRegistro" placeholder="Tu nombre y apellido" required>
+                    <span class="error" id="errorNombre"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="correoRegistro">Correo institucional</label>
+                    <input type="email" id="correoRegistro" placeholder="usuario@uam.edu.co" required>
+                    <span class="error" id="errorCorreo"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="passwordRegistro">Contraseña</label>
+                    <input type="password" id="passwordRegistro" placeholder="Mínimo 8 caracteres, una mayúscula y un número" required>
+                    <span class="error" id="errorPassword"></span>
+                </div>
+
+                <button type="submit" class="boton boton-registro">Registrarse</button>
+                <p id="mensajeRegistro" class="mensaje"></p>
+            </form>
+
+            <!-- Enlace para volver al login (index.html) -->
+            <div class="enlace-cambio">
+                <p>¿Ya tienes una cuenta? <a href="index.html">Inicia sesión</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/registro.js"></script>
+</body>
+</html>

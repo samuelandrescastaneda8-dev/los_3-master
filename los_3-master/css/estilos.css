@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), url("https://www.autonoma.edu.co/sites/default/files/styles/webp/public/2026-08/banner-donacion-grande_1.webp?itok=pSMoxTUo");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #252525;
+}
+
+.contenedor-principal {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 50px 8%;
+}
+
+.presentacion {
+    width: 42%;
+    max-width: 480px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-contenedor {
+    width: 125px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.presentacion h1 {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    font-weight: 600;
+    color: #292929;
+    margin-bottom: 22px;
+}
+
+.icono-comunidad {
+    width: 125px;
+    height: 125px;
+    border: 3px solid #555;
+    border-radius: 65px 65px 15px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.icono-persona {
+    position: absolute;
+    top: 12px;
+    font-size: 38px;
+    color: #4c4c4c;
+}
+
+.icono-edificio {
+    position: absolute;
+    bottom: 12px;
+    font-size: 43px;
+    color: #4c4c4c;
+}
+
+.mensaje-principal {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #c4b23e;
+    margin-bottom: 2px;
+}
+
+.mensaje-secundario {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    letter-spacing: 1px;
+    color: #9c4c6c;
+    margin-bottom: 18px;
+}
+
+.descripcion {
+    width: 80%;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.panel-formularios {
+    width: 42%;
+    max-width: 470px;
+    background: rgba(255, 255, 255, 0.76);
+    border-radius: 15px;
+    padding: 35px 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(5px);
+}
+
+.formulario-contenedor {
+    width: 100%;
+}
+
+.titulo-seccion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.titulo-seccion h2 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+}
+
+.linea {
+    height: 1px;
+    flex: 1;
+    background: #b4b4b4;
+}
+
+.campo {
+    margin-bottom: 17px;
+}
+
+.campo label {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    color: #4c4c4c;
+    margin-bottom: 6px;
+}
+
+.campo input {
+    width: 100%;
+    height: 42px;
+    padding: 0 13px;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.campo input:focus {
+    border-color: #7b5c91;
+    box-shadow: 0 0 0 2px rgba(123, 92, 145, 0.12);
+}
+
+.campo input::placeholder {
+    color: #999;
+}
+
+.boton {
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.boton-login {
+    background: #575757;
+    color: white;
+}
+
+.boton-login:hover {
+    background: #3f3f3f;
+    transform: translateY(-1px);
+}
+
+.boton-registro {
+    background: #8b5570;
+    color: white;
+}
+
+.boton-registro:hover {
+    background: #70445a;
+    transform: translateY(-1px);
+}
+
+.separador {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 30px 0;
+    color: #888;
+    font-family: Georgia, serif;
+}
+
+.separador::before,
+.separador::after {
+    content: "";
+    height: 1px;
+    background: #c9c9c9;
+    flex: 1;
+}
+
+.separador span {
+    font-size: 14px;
+}
+
+.error {
+    display: block;
+    min-height: 15px;
+    color: #b34848;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.mensaje {
+    min-height: 20px;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+    .contenedor-principal {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+
+    .presentacion,
+    .panel-formularios {
+        width: 90%;
+        max-width: 520px;
+    }
+
+    .presentacion {
+        order: 1;
+    }
+
+    .panel-formularios {
+        order: 2;
+    }
+}
+
+@media (max-width: 500px) {
+    .contenedor-principal {
+        padding: 30px 12px;
+    }
+
+    .presentacion,
+    .panel-formularios {
+        width: 100%;
+    }
+
+    .panel-formularios {
+        padding: 25px 20px;
+    }
+
+    .presentacion h1 {
+        font-size: 24px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 19px;
+    }
+
+    .descripcion {
+        width: 95%;
+    }
+}

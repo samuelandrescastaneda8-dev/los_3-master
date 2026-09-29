@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Daño / PQRS - Comunidad UAM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estudiante.css">
+    <link rel="stylesheet" href="css/reportar.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo-header">
+            <h2>Comunidad UAM Activa</h2>
+        </div>
+        <div class="usuario-info">
+            <span id="nombreEstudiante">Cargando usuario...</span>
+            <a href="estudiante.html" class="boton-volver">Volver al inicio</a>
+        </div>
+    </header>
+
+    <main class="contenedor-reportar">
+        <section class="panel-formulario-reporte">
+            <div class="titulo-seccion">
+                <span class="linea"></span>
+                <h2 id="tituloFormulario">Reportar Daño o PQRS</h2>
+                <span class="linea"></span>
+            </div>
+
+            <form id="formReporte">
+                <!-- Se eliminó el campo "Tipo de Solicitud" -->
+
+                <div class="campo">
+                    <label for="tipoDano">Categoría / Tipo</label>
+                    <select id="tipoDano" name="tipoDano" required>
+                        <option value="">Seleccione una categoría</option>
+                        <option value="Infraestructura">Infraestructura (Paredes, techos, pisos)</option>
+                        <option value="Mobiliario">Mobiliario (Sillas, mesas, tableros)</option>
+                        <option value="Equipos / Tecnología">Equipos / Tecnología (Proyectores, PC)</option>
+                        <option value="Servicios Sanitarios">Servicios Sanitarios</option>
+                        <option value="Eléctrico / Iluminación">Eléctrico / Iluminación</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="edificio">Edificio / Ubicación General</label>
+                    <select id="edificio" name="edificio" required>
+                        <option value="">Seleccione el edificio</option>
+                        <option value="Edificio Central">Edificio Central</option>
+                        <option value="Edificio Fundadores">Edificio Fundadores</option>
+                        <option value="Aulas Sacatín">Aulas Sacatín</option>
+                        <option value="Laboratorios">Laboratorios</option>
+                        <option value="Biblioteca">Biblioteca</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="ubicacionEspecifica">Ubicación Específica</label>
+                    <input type="text" id="ubicacionEspecifica" placeholder="Ej: Salón 302, Baño piso 2, Pasillo principal" required>
+                </div>
+
+                <div class="campo">
+                    <label for="descripcion">Descripción detallada</label>
+                    <textarea id="descripcion" rows="4" placeholder="Describa brevemente el problema detectado..." required></textarea>
+                </div>
+
+                <div class="campo">
+                    <label for="evidencia">Evidencia Fotográfica (Opcional)</label>
+                    <input type="file" id="evidencia" accept="image/*">
+                </div>
+
+                <button type="submit" class="boton boton-registro">Enviar Reporte</button>
+                <p id="mensajeReporte" class="mensaje"></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/reportar.js"></script>
+</body>
+</html>

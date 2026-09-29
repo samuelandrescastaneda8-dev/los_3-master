@@ -1,0 +1,19 @@
+/* Estilos adicionales específicos para la gestión de personal */
+.estado-disponible {
+    color: #4d7c55;
+    font-weight: bold;
+}
+
+.estado-ocupado {
+    color: #c4b23e;
+    font-weight: bold;
+}
+
+.select-asignacion {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    background: white;
+    cursor: pointer;
+}
